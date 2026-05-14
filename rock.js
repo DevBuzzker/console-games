@@ -12,9 +12,9 @@ if (args.length !== 1) {
 const userInput = args.at(0);
 console.log("User input: " + userInput);
 
-// TODO this doesnt work
 if (!correctArgs.some((x) => x === userInput)) {
   console.error("Wrong input - type rock, paper or scissors.");
+  process.exit(2);
 }
 
 const computerChoiseInt = Math.floor(Math.random() * 3); //0, 1 or 2
